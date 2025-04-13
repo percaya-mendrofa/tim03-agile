@@ -1,0 +1,174 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 20px;
+}
+
+.profile-pic {
+    margin-right: 30px;
+}
+
+/* Style untuk foto profil */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3498db;
+}
+
+.header-text h1 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 32px;
+}
+
+.profession {
+    color: #3498db;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Sections */
+section {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 22px;
+    border-left: 5px solid #3498db;
+    padding-left: 10px;
+}
+
+h3 {
+    color: #34495e;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+/* Contact Info */
+.contact-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+/* Education & Experience */
+.education-item, .experience-item {
+    margin-bottom: 20px;
+}
+
+.year {
+    color: #7f8c8d;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.position {
+    color: #3498db;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Skills */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skill-item {
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    height: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #3498db;
+}
+
+/* Languages & Interests */
+.languages ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.languages li {
+    background-color: #ecf0f1;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-pic {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .contact-details, .skills-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .languages ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
