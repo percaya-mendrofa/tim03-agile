@@ -1,174 +1,207 @@
-/* Reset CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
-body {
-    background-color: #f5f5f5;
-    color: #333;
-    line-height: 1.6;
+/* HTML */
+html {
+    scroll-behavior: smooth;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.container {
-    max-width: 900px;
-    margin: 30px auto;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    border-radius: 5px;
+/* And HTML */
+
+/* Header */ 
+/* Warna awal header (transparan) */
+.bg-transparent {
+    background-color: rgba(255, 255, 255, 0); /* Sepenuhnya transparan */
 }
 
-/* Header */
-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 20px;
+/* Warna hitam transparan yang muncul saat scroll */
+.bg-zinc-950-transparent {
+    background-color: rgba(24, 24, 27, 0.8); /* Warna hitam dengan transparansi 80% */
+    transition: background-color 0.5s ease-in-out; /* Transisi perubahan warna */
+}
+/* And Header */ 
+
+/* Navbar */
+#slide-menu {
+    transition: transform 0.3s ease-in-out;
 }
 
-.profile-pic {
-    margin-right: 30px;
+.bg-zinc-950-transparent {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Style untuk foto profil */
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #3498db;
+#overlay {
+    transition: opacity 0.3s ease-in-out;
 }
 
-.header-text h1 {
-    color: #2c3e50;
-    margin-bottom: 5px;
-    font-size: 32px;
+#menu-toggle.open #menu-icon {
+    transform: rotate(90deg);
 }
 
-.profession {
-    color: #3498db;
-    font-size: 18px;
-    font-weight: bold;
-}
+/* And Navbar */
 
-/* Sections */
-section {
-    margin-bottom: 25px;
-    padding-bottom: 25px;
-    border-bottom: 1px solid #eee;
-}
-
-section:last-child {
-    border-bottom: none;
-}
-
-h2 {
-    color: #2c3e50;
-    margin-bottom: 15px;
-    font-size: 22px;
-    border-left: 5px solid #3498db;
-    padding-left: 10px;
-}
-
-h3 {
-    color: #34495e;
-    margin-bottom: 5px;
-    font-size: 18px;
-}
-
-/* Contact Info */
-.contact-details {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-}
-
-/* Education & Experience */
-.education-item, .experience-item {
-    margin-bottom: 20px;
-}
-
-.year {
-    color: #7f8c8d;
-    font-style: italic;
-    margin-bottom: 5px;
-}
-
-.position {
-    color: #3498db;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
-/* Skills */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 15px;
-}
-
-.skill-item {
-    margin-bottom: 10px;
-}
-
-.skill-bar {
-    height: 10px;
-    background-color: #ecf0f1;
-    border-radius: 5px;
+/* hero Section */
+.typing-animation {
+    font-size: 1.75rem;
+    /* Adjust as needed */
+    color: #e11d48;
+    border-right: 2px solid #e11d48;
+    /* Cursor effect */
+    white-space: nowrap;
     overflow: hidden;
-    margin-top: 5px;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
-.skill-level {
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #e11d48;
+    }
+}
+
+/* Typing Animation Styles */
+.typing-animation {
+    font-size: 1.75rem;
+    /* Default size for mobile screens */
+    color: #e11d48;
+    border-right: 2px solid #e11d48;
+    /* Cursor effect */
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #fff;
+    }
+}
+
+/* Media queries to adjust text sizes */
+@media (min-width: 640px) {
+
+    /* md */
+    .text-lg {
+        font-size: 1.25rem;
+        /* Larger size for medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* lg */
+    .text-xl {
+        font-size: 1.5rem;
+        /* Larger size for large screens */
+    }
+
+    #carouselInner img {
+        height: auto;
+        /* Membiarkan gambar menyesuaikan tingginya secara otomatis */
+        max-height: 640px;
+        /* Mengatur batas maksimal tinggi gambar */
+        object-fit: cover;
+        /* Menjaga gambar tetap proporsional dan terpotong jika terlalu besar */
+    }
+}
+
+@media (min-width: 1280px) {
+
+    /* xl */
+    .text-2xl {
+        font-size: 1.875rem;
+        /* Larger size for extra-large screens */
+    }
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-3d {
+    transition: box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.image-container:hover .image-3d {
+    box-shadow: 0 0 20px #e11d48;
+    filter: brightness(1.2);
+}
+
+.image-container {
+    perspective: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-3d {
+    transition: transform 0.1s;
+    transform-style: preserve-3d;
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    background-color: #3498db;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 0;
 }
 
-/* Languages & Interests */
-.languages ul {
-    list-style-type: none;
-    padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+.image-container:hover::before {
+    opacity: 1;
 }
 
-.languages li {
-    background-color: #ecf0f1;
-    padding: 5px 10px;
-    border-radius: 3px;
+.image-3d {
+    position: relative;
+    z-index: 10;
+    /* Agar gambar tetap berada di depan efek hover */
+    transition: transform 0.3s ease;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .profile-pic {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    
-    .contact-details, .skills-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .languages ul {
-        flex-direction: column;
-        gap: 5px;
-    }
+.image-container:hover .image-3d {
+    transform: scale(1.50);
 }
+
+/* And hero Section */
+
+
